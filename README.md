@@ -44,6 +44,10 @@ saucedemo-ai-testing/
 │   ├── login.spec.ts
 │   ├── cart.spec.ts
 │   └── checkout.spec.ts
+|   |__ sorting.spec.ts
+|   |__ cart-badge.spec.ts
+|   |__ cart-badge-edge.ts
+|   |__ product-details.spec.ts
 └── playwright.config.ts   # Playwright configuration
 
 ---
@@ -67,7 +71,12 @@ saucedemo-ai-testing/
 | Login | 6 | ✅ Passing |
 | Cart | 8 | ✅ Passing |
 | Checkout | 12 | ✅ Passing |
-| **Total** | **27** | **✅ 100%** |
+| Product Sorting | 4 | ✅ Passing |
+| Product Details | 3 | ✅ Passing |
+| Cart Badge | 4 | ✅ Passing |
+| Cart Badge Edge Cases | 3 | ✅ Passing |
+| Seed | 1 | ✅ Passing |
+| **Total** | **45** | **✅ 100%** |
 
 ---
 
@@ -159,7 +168,7 @@ GitHub Actions:
 
 After running tests, reports are available at:
 - **Playwright Report:** `playwright-report/index.html`
-- **Allure Report:** `allure-report/index.html`
+- **Allure Report:** `![Allure Report](docs/allure report screenshot.png)
 
 ---
 

@@ -30,7 +30,19 @@ export class InventoryPage {
         return await this.page.textContent(this.cartBadge);
     }
 
+    async isCartBadgeVisible() {
+        return await this.page.locator(this.cartBadge).isVisible();
+    }
+
     async sortBy(option: string) {
         await this.page.selectOption(this.sortDropdown, option);
+    }
+
+    async getProductNames() {
+        return await this.page.locator('.inventory_item_name').allTextContents();
+    }
+
+    async clickProduct(productName: string) {
+        await this.page.getByText(productName).click();
     }
 }
